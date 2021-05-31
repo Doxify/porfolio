@@ -7,7 +7,7 @@
       technologies: ["Docker", "Express", "Node.js", "Pug", "Passport", "Postgres", "Pusher"],
       github_link: "https://github.com/doxify/uno",
       demo_link: "https://uno.ageorgescu.dev/",
-      image_link: "https://i.imgur.com/bYWKpyP.png"
+      image_link: "/images/uno-preview.png"
     },
     { 
       name: "HTTP/1.1 Web Server", 
@@ -17,7 +17,7 @@
       technologies: ["Java"],
       github_link: "https://github.com/Doxify/web-server",
       demo_link: null,
-      image_link: "https://i.imgur.com/S8U72R0.png"
+      image_link: "/images/web-server-preview.png"
     },
     { 
       name: "Photo Sharing App", 
@@ -26,7 +26,7 @@
       technologies: ["Express", "Node.js", "MySQL", "Bootstrap"],
       github_link: "https://github.com/Doxify/imgur-clone/",
       demo_link: null,
-      image_link: "https://i.imgur.com/7rrfTZS.png"
+      image_link: "/images/photo-sharing-preview.png"
     }
   ]
 
@@ -44,14 +44,14 @@ block projects
               br
               each technology in project.technologies
                 small.technology-item-dark=technology
-            .card-footer.text-end
-              a.me-2.btn.btn-sm.btn-light(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="View source code on GitHub" href=project.github_link)
-                span Source Code 
-                  i.fab.fa-github
-              if project.demo_link
-                a.btn.btn-sm.btn-success(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Deployed to Heroku" href=project.demo_link)
-                  span Demo 
-                    i.fas.fa-cloud
+          div.mt-2.text-start
+            a.me-2.btn.btn-sm.btn-outline-dark(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="View source code on GitHub" href=project.github_link)
+              span Source Code 
+                i.fab.fa-github
+            if project.demo_link
+              a.btn.btn-sm.btn-outline-success(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Deployed to Heroku" href=project.demo_link)
+                span Demo 
+                  i.fas.fa-cloud
         .col-sm-12.col-md-7.d-none.d-md-block
           .card.project-demo-card.shadow.hvr-grow
               img.card-img(src=project.image_link alt="Card image cap")
