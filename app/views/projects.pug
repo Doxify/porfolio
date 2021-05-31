@@ -31,11 +31,11 @@
   ]
 
 block projects
-  .row.p-2
+  .row
     each project in projects
       br
       .row.mb-5.mt-5
-        .col-sm-12.col-md-5.my-auto.text-start
+        .col-sm-12.col-md-5.my-auto
           h3.card-title=project.name
           .card.project-desc-card.bg-light.shadow.bg-dark.text-white
             img.card-img(src=project.image_link alt="Card image cap").d-sm-none
