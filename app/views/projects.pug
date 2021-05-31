@@ -38,6 +38,7 @@ block projects
         .col-sm-12.col-md-5.my-auto.text-start
           h3.card-title=project.name
           .card.project-desc-card.bg-light.shadow.bg-dark.text-white
+            img.card-img(src=project.image_link alt="Card image cap").d-sm-none
             .card-body
               h6.card-text=project.desc
               br
@@ -48,10 +49,10 @@ block projects
                 span Source Code 
                   i.fab.fa-github
               if project.demo_link
-                a.btn.btn-sm.btn-outline-success(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Deployed to Heroku" href=project.demo_link)
+                a.btn.btn-sm.btn-success(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Deployed to Heroku" href=project.demo_link)
                   span Demo 
                     i.fas.fa-cloud
-        .col-sm-12.col-md-7
+        .col-sm-12.col-md-7.d-none.d-md-block
           .card.project-demo-card.shadow.hvr-grow
               img.card-img(src=project.image_link alt="Card image cap")
   
