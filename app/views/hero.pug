@@ -1,0 +1,23 @@
+block hero
+  .container
+    .row.p-3
+      //- #profile-picture.col-sm-4.text-center
+      //-   img.avatar.shadow.rounded-circle.z-depth-2(height="175" src="/images/profile.jpg")
+      #profile-description.col-sm-12.text-center
+      
+        div.mb-3
+          img.avatar.shadow.rounded-circle.z-depth-2(height="175" src="/images/profile.jpg")
+        
+        div
+          small.text-muted 👋 Hello, I'm
+          h6.name.display-6 Andrei Georgescu
+            br
+            small.description.text-muted Software Engineer
+          
+          #profile-social-buttons
+            a#github.btn.btn-outline-dark.me-2(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="GitHub" href="https://github.com/doxify")
+              i.fab.fa-github
+            a#linkedin.btn.btn-outline-dark.me-2(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/andrei-georgescu/")
+              i.fab.fa-linkedin
+            a#linkedin.btn.btn-outline-dark.me-2(type="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Instagram" href="https://instagram.com/vndreigeorgescu")
+              i.fab.fa-instagram

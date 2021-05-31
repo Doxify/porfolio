@@ -1,0 +1,26 @@
+- 
+  var languages = [
+    { name: "C/C++", mastery: "Advanced", level: '4' },
+    { name: "Java", mastery: "Proficient", level: 4 },
+    { name: "Javascript", mastery: "Proficient", level: 4 },
+    { name: "Python", mastery: "Intermediate", level: 3 },
+    { name: "SQL", mastery: "Intermediate", level: 3 },
+    { name: "Go", mastery: "Elementary", level: 2 }
+  ]
+block languages
+  .card.bg-light.shadow
+    .card-header.bg-light-gray
+      h5.card-subtitle 📘 Languages
+    .card-body
+      .list-group 
+        for l in languages
+          div.flex-column.align-items-start.mb-2
+            .d-flex.w-100.justify-content-between
+              h4.mb-1=l.name
+              small                
+                each _, i in Array(5)
+                  if l.level > i
+                    i.fas.fa-xs.fa-star
+                  else
+                    i.far.fa-xs.fa-star
+            small=l.mastery

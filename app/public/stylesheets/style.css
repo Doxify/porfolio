@@ -1,0 +1,67 @@
+body {
+  background-color: #eaf4ec !important;
+}
+
+.nav-link {
+  /* background-color: #212529 !important; */
+  color: #212529 !important;
+}
+.nav-link:hover {
+  /* color: #444a50 !important;
+  border-bottom: 1px solid #212529; */
+  background-color: #212529;
+  color: white !important;
+}
+
+.card-header {
+  background: #212529 !important;
+  color: white !important;
+}
+
+.card-header-purple {
+  background: #25236e !important;
+  color: white !important;
+}
+
+.text-purple {
+  color: #25236e !important;
+}
+
+.technology-item {
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #212529  !important;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.technology-item-dark {
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #ffffff  !important;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.project-desc-card {
+  z-index: 2
+}
+.project-demo-card {
+  background-image: fixed;
+  z-index: 1
+}
+
+.avatar {
+  border: 2.5px solid #212529  !important;
+}
+
+.hero-container {
+  height: 20vh;
+}
+
+.btn-circle {
+  border-radius: 50% !important;
+  margin-right: 10px;
+}

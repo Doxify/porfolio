@@ -1,0 +1,22 @@
+- var frameworks = [ "Express", "Flask", "Node.js", "React", "Tensorflow"  ]
+- var databases = [ "MongoDB", "MySQL", "Postgres" ]
+- var devops = [ "AWS", "GCP", "Docker" ]
+- var tools = [ "Bash", "Git", "Jira", "Maven", "OAuth", "Unix" ]
+
+block technologies
+  .card.bg-light.shadow
+    .card-header.bg-light-gray
+        h5.card-subtitle 💻 Technologies
+    .card-body
+      h6.card-subtitle.mb-2 Databases
+      each i in databases
+        span.technology-item.text-black=i
+      h6.card-subtitle.mt-3.mb-2 DevOps
+      each i in devops
+        span.technology-item.text-black=i
+      h6.card-subtitle.mt-3.mb-2 Frameworks
+      each i in frameworks
+        span.technology-item.text-black=i
+      h6.card-subtitle.mt-3.mb-2 Tools
+      each i in tools
+        span.technology-item.text-black=i
