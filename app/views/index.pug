@@ -1,16 +1,15 @@
 extends layout
 block content
-  div.container
-    div.p-2.mt-5
-        section#hero
-          div.row
-            .col-sm-12
-              include hero
-
-    div.p-2.mt-3
-      section#about
-      .mb-2
+  .container
+    .mt-5
+      section#hero
         .row
+          .col-sm-12
+            include hero
+
+    .mt-3
+      section#about
+        .row.mb-2
           .col-sm-12.col-md-8.mb-2
             .row
               .col-sm-12.mb-4
@@ -19,7 +18,6 @@ block content
                 include technologies
               .col-sm-6.mb-4
                 include languages
-              
           .col-sm-12.col-md-4.mb-2
             .row
               .col-sm-12.mb-4
@@ -27,14 +25,14 @@ block content
               .col-sm-12.mb-4
                 include resume
     
-    div.p-2.mt-3
+    .mt-3
       section#projects
         h3.text-center Here are some things I've created
         include projects
     
-    div.mt-5.mb-5
+    .mt-5.mb-5
       section#contact
         h3.text-center.mb-5 Lets connect!
         .row
-          .col-sm-12.col-md-6.offset-md-3
+          .col-sm-12
             include contact
