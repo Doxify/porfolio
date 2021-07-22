@@ -1,11 +1,12 @@
 - 
   var languages = [
-    { name: "C/C++", mastery: "Advanced", level: '4' },
+    { name: "C/C++", mastery: "Proficient", level: '4' },
     { name: "Java", mastery: "Proficient", level: 4 },
-    { name: "Javascript", mastery: "Proficient", level: 4 },
-    { name: "Python", mastery: "Intermediate", level: 3 },
-    { name: "SQL", mastery: "Intermediate", level: 3 },
-    { name: "Go", mastery: "Elementary", level: 2 }
+    { name: "TypeScript", mastery: "Proficient", level: 4 },
+    { name: "JavaScript", mastery: "Proficient", level: 4 },
+    { name: "Python", mastery: "Proficient", level: 4 },
+    { name: "SQL", mastery: "Proficient", level: 4 },
+    { name: "Go", mastery: "Intermediate", level: 3 }
   ]
 block languages
   .card.bg-light.shadow
@@ -20,7 +21,7 @@ block languages
               small                
                 each _, i in Array(5)
                   if l.level > i
-                    i.fas.fa-xs.fa-star
+                    i.fas.fa-xs.fa-circle
                   else
-                    i.far.fa-xs.fa-star
+                    i.far.fa-xs.fa-circle
             small=l.mastery

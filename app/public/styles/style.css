@@ -32,14 +32,14 @@
   margin-bottom: 5px;
 }
 
-.projects-container {
+/* .projects-container {
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   
-}
+} */
 
 .scrolling-wrapper-flexbox {
   display: flex;
@@ -54,6 +54,11 @@
   padding: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
+}
+
+.project-thumbnail {
+  max-width: 250px;
+  /* max-height: 200px; */
 }
 
 /* .project-desc-card {

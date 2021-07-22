@@ -3,7 +3,9 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('index', { title: 'Andrei Georgescu | Software Engineer' });
+  res.render('index', { 
+    title: 'Andrei Georgescu | Software Engineer' 
+  });
 });
 
 router.get('/*', (req, res) => {

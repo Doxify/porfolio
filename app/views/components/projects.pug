@@ -1,9 +1,19 @@
 - 
   var projects = [
     { 
+      name: "Unofficial API for Supreme", 
+      desc: "A Go package that allows you to easily interface with the www.supremenewyork.com backend. Currently supports obtaining products in stock, products by keywords, and product styles.",
+      date: "June 2021",
+      area_of_development: "Backend",
+      technologies: ["Go"],
+      github_link: "https://github.com/Doxify/gosupreme",
+      demo_link: null,
+      image_link: "/images/go-supreme.png"
+    },
+    { 
       name: "Discord Credentials Bot", 
       desc: "A bot for my software engineering team's Discord server. The bot's purpose was to return user credentials for our production servers.",
-      //- date: "June 2020",
+      date: "June 2021",
       area_of_development: "Backend",
       technologies: ["Go"],
       github_link: "https://github.com/Doxify/csc648-discord-bot",
@@ -13,7 +23,7 @@
     { 
       name: "Uno", 
       desc: "Four player, online multiplayer version of the card game, Uno. Also features global and in-game chat rooms.",
-      //- date: "April 2021",
+      date: "April 2021",
       technologies: ["Docker", "Express", "Node.js", "Pug", "Passport", "Postgres", "Pusher"],
       area_of_development: "Full Stack",
       github_link: "https://github.com/doxify/uno",
@@ -24,7 +34,7 @@
       name: "HTTP/1.1 Web Server", 
       //- desc: "A web server capable of the HTTP/1.1  protocol created with only standard libraries in Java.",
       desc: "Backend web server written in Java using only standard libraries. It obeys the HTTP/1.1 protocol to distribute web pages.",
-      //- date: "February 2021",
+      date: "February 2021",
       technologies: ["Java"],
       area_of_development: "Backend",
       github_link: "https://github.com/Doxify/web-server",
@@ -34,7 +44,7 @@
     { 
       name: "Photo Sharing App", 
       desc: "Clone of the image sharing site, Imgur. It allows users to upload, search, comment on photos.",
-      //- date: "June 2020",
+      date: "June 2020",
       area_of_development: "Full Stack",
       technologies: ["Express", "Node.js", "MySQL", "Bootstrap"],
       github_link: "https://github.com/Doxify/imgur-clone/",
@@ -44,43 +54,88 @@
   ]
 
 block projects
-  //- .row
-  //-   each project in projects
-  //-     br
-  //-     .row.mb-5.mt-5
-  //-       .col-sm-12.col-md-5.my-auto
-  //-         h3.card-title=project.name
-  //-         .card.project-desc-card.bg-light.shadow.bg-dark.text-white
-  //-           img.card-img(src=project.image_link alt="Card image cap").d-md-none
-  //-           .card-body
-  //-             p.card-text=project.desc
-  //-             //- br       
-  //-             p.card-text.small.text-muted Built with...
-  //-             each technology in project.technologies
-  //-               small.technology-item-dark=technology
-  //-         div.mt-2.text-start
-  //-           a.me-2.btn.btn-sm.btn-outline-dark(data-toggle="tooltip" data-placement="bottom" target="_blank" title="View source code on GitHub" href=project.github_link)
-  //-             span Source Code 
-  //-               i.fab.fa-github
-  //-           if project.demo_link
-  //-             a.btn.btn-sm.btn-outline-success(data-toggle="tooltip" data-placement="bottom" target="_blank" title="Deployed to Heroku" href=project.demo_link)
-  //-               span Demo 
-  //-                 i.fas.fa-cloud
-  //-       .col-sm-12.col-md-7.d-none.d-md-block
-  //-         .card.project-demo-card.shadow.hvr-grow
-  //-             img.card-img(src=project.image_link alt="Card image cap")
-  .d-flex.flex-row.flex-nowrap.p-5
+  .row
     each project in projects
-      .card.card-body.bg-light.shadow.bg-dark.text-white.card.project-desc-card
-        h3.card-title=project.name
-        //- .card.project-desc-card.bg-light.shadow.bg-dark.text-white
-        img.card-img(src=project.image_link alt="Card image cap").d-md-none
-        p.card-text=project.desc
-        //- br       
-        p.card-text.small.text-muted Built with...
-        div
-          each technology in project.technologies
-            small.technology-item-dark=technology
+      //- .card.bg-light.shadow.mb-4
+      .row.g-0
+        .col-md-4.pt-3.text-center
+          img.rounded-start.project-thumbnail(src=project.image_link alt='...')
+        .col-md-8.p-2
+          .card.bg-light.shadow.mb-4
+            .card-body
+              h5.card-title=project.name
+              p.card-text=project.desc
+              p.card-text.small Built with...
+                br
+                each technology in project.technologies
+                  small.technology-item=technology
+              //- div.mt-2
+              .row.mt-2
+                .col-sm-12.text-end
+                  a.me-2.btn.btn-sm.btn-outline-dark(data-toggle="tooltip" data-placement="bottom" target="_blank" title="View source code on GitHub" href=project.github_link)
+                    span View Source Code 
+                      i.fab.fa-github
+                  if project.demo_link
+                    a.btn.btn-sm.btn-outline-success(data-toggle="tooltip" data-placement="bottom" target="_blank" title="Deployed to Heroku" href=project.demo_link)
+                      span View Demo 
+                        i.fas.fa-cloud-upload
+                //- .col-sm-4.text-end
+                //-   small.card-text.text-black Date:  
+                //-     span.card-text=project.date
+              
+
+      //- .col
+      //-   .card.project-desc-card.bg-light.shadow.bg-dark.text-white
+      //-     img.card-img(src=project.image_link alt="Card image cap").d-md-none
+      //-     .card-body
+      //-       h5.card-title=project.name
+      //-       p.card-text=project.desc
+      //-       //- br       
+      //-       p.card-text.small.text-muted Built with...
+      //-       each technology in project.technologies
+      //-         small.technology-item-dark=technology
+            
+
+  //- h4.card-title Some of my projects
+  //- each project in projects
+  //-   br
+  //-   .row.mb-5.mt-5
+  //-     .col-sm-12.my-auto
+  //-       h3.card-title=project.name
+  //-       .card.project-desc-card.bg-light.shadow.bg-dark.text-white
+  //-         img.card-img(src=project.image_link alt="Card image cap").d-md-none
+  //-         .card-body
+  //-           p.card-text=project.desc
+  //-           //- br       
+            //- p.card-text.small.text-muted Built with...
+            //- each technology in project.technologies
+            //-   small.technology-item-dark=technology
+        //- div.mt-2.text-start
+        //-   a.me-2.btn.btn-sm.btn-outline-dark(data-toggle="tooltip" data-placement="bottom" target="_blank" title="View source code on GitHub" href=project.github_link)
+        //-     span Source Code 
+        //-       i.fab.fa-github
+        //-   if project.demo_link
+        //-     a.btn.btn-sm.btn-outline-success(data-toggle="tooltip" data-placement="bottom" target="_blank" title="Deployed to Heroku" href=project.demo_link)
+        //-       span Demo 
+        //-         i.fas.fa-cloud
+  //-     .col-sm-12.col-md-7.d-none.d-md-block
+  //-       .card.project-demo-card.shadow.hvr-grow
+  //-           img.card-img(src=project.image_link alt="Card image cap")
+  
+
+  
+  //- .d-flex.flex-row.flex-nowrap.p-5
+  //-   each project in projects
+  //-     .card.card-body.bg-light.shadow.bg-dark.text-white.card.project-desc-card
+  //-       h3.card-title=project.name
+  //-       //- .card.project-desc-card.bg-light.shadow.bg-dark.text-white
+  //-       img.card-img(src=project.image_link alt="Card image cap").d-md-none
+  //-       p.card-text=project.desc
+  //-       //- br       
+  //-       p.card-text.small.text-muted Built with...
+  //-       div
+  //-         each technology in project.technologies
+  //-           small.technology-item-dark=technology
         //- div.mt-2.text-start
         //-   a.me-2.btn.btn-sm.btn-outline-dark(data-toggle="tooltip" data-placement="bottom" target="_blank" title="View source code on GitHub" href=project.github_link)
         //-     span Source Code 

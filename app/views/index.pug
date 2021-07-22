@@ -14,23 +14,27 @@ block content
             .row
               .col-sm-12.mb-4
                 include components/about
-              .col-sm-6.mb-4
-                include components/technologies
-              .col-sm-6.mb-4
-                include components/languages
-          .col-sm-12.col-md-4.mb-2
+              .col-sm-12.p-4
+                //- section#projects
+                h3.mb-4.text-center Here are some things I've created
+                include components/projects
+          .col-sm-12.col-md-3.mb-2
             .row
               .col-sm-12.mb-4
                 include components/education
               .col-sm-12.mb-4
+                include components/languages
+              .col-sm-12.mb-4
+                include components/technologies
+              .col-sm-12.mb-4
                 include components/resume
     
-    .mt-3
-      section#projects
-        h3.text-center Here are some things I've created
+    //- .mt-3
+    //-   section#projects
+    //-     h3.text-center Here are some things I've created
   
-  .container-fluid.projects-container
-    include components/projects
+  //- .container-fluid.projects-container
+  //-   include components/projects
     
   .container
     .mt-5.mb-5
