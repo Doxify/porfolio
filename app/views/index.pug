@@ -1,11 +1,11 @@
-extends layout
+extends layout/default
 block content
   .container
     .mt-5
       section#hero
         .row
           .col-sm-12
-            include hero
+            include components/hero
 
     .mt-3
       section#about
@@ -13,26 +13,29 @@ block content
           .col-sm-12.col-md-8.mb-2
             .row
               .col-sm-12.mb-4
-                include about
+                include components/about
               .col-sm-6.mb-4
-                include technologies
+                include components/technologies
               .col-sm-6.mb-4
-                include languages
+                include components/languages
           .col-sm-12.col-md-4.mb-2
             .row
               .col-sm-12.mb-4
-                include education
+                include components/education
               .col-sm-12.mb-4
-                include resume
+                include components/resume
     
     .mt-3
       section#projects
         h3.text-center Here are some things I've created
-        include projects
+  
+  .container-fluid.projects-container
+    include components/projects
     
+  .container
     .mt-5.mb-5
       section#contact
         h3.text-center.mb-5 Lets connect!
         .row
           .col-sm-12
-            include contact
+            include components/contact

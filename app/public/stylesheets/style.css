@@ -32,8 +32,23 @@
   margin-bottom: 5px;
 }
 
+.projects-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
 .technology-item-dark {
-  display: inline-block;
+  /* display: float; */
   border-radius: 3px;
   border: 1px solid #ffffff  !important;
   padding: 5px;
@@ -41,12 +56,18 @@
   margin-bottom: 5px;
 }
 
-.project-desc-card {
+/* .project-desc-card {
   z-index: 2
 }
 .project-demo-card {
   background-image: fixed;
   z-index: 1
+} */
+
+.card.project-desc-card {
+  min-width: 400px;
+  max-width: 400px;
+  margin-right: 20px;
 }
 
 .avatar {
