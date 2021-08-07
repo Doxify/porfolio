@@ -1,12 +1,16 @@
 import Head from 'next/head'
+import Layout from '../../components/layout'
 
 export default function Home() {
   return (
-    <div className="container">
+    <Layout>
       <Head>
         <title>Andrei Georgescu - Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    </div>
+      
+      <h1>Welcome to the blog!</h1>
+
+    </Layout>
   )
 }
