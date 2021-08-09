@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="container">
-        <div className="row p-3">
+        <div className="row p-1">
           <div className="col text-center" id="profile-description">
             <div className="mb-3">
               <Image
@@ -13,21 +13,17 @@ export default function Hero() {
                 height="175"
                 width="175"
               />
-              <div id="name">
+              <div id="name mb-5">
                 <small className="text-muted">
                   👋 Hello, I'm
-                  <h6 className="name display-6">
+                  <h6 className="name display-6 text-dark">
                     Andrei Georgescu
-                    <br />
-                    <small className="description text-muted">
-                      Software Engineer
-                    </small>
                   </h6>
                 </small>
               </div>
               <div id="profile-social-buttons">
                 <a
-                  class="btn btn-outline-dark me-2"
+                  className="btn btn-outline-dark me-2"
                   id="github"
                   data-toggle="tooltip"
                   data-placement="bottom"
@@ -35,10 +31,10 @@ export default function Hero() {
                   title="GitHub"
                   href="https://github.com/doxify"
                 >
-                  <i class="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
                 </a>
                 <a
-                  class="btn btn-outline-dark me-2"
+                  className="btn btn-outline-dark me-2"
                   id="linkedin"
                   data-toggle="tooltip"
                   data-placement="bottom"
@@ -46,10 +42,10 @@ export default function Hero() {
                   title="LinkedIn"
                   href="https://www.linkedin.com/in/andrei-georgescu/"
                 >
-                  <i class="fab fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
                 <a
-                  class="btn btn-outline-dark me-2"
+                  className="btn btn-outline-dark me-2"
                   id="linkedin"
                   data-toggle="tooltip"
                   data-placement="bottom"
@@ -57,10 +53,10 @@ export default function Hero() {
                   title="Discord"
                   href="https://discord.com/users/105017641051123712"
                 >
-                  <i class="fab fa-discord"></i>
+                  <i className="fab fa-discord"></i>
                 </a>
                 <a
-                  class="btn btn-outline-dark"
+                  className="btn btn-outline-dark"
                   id="linkedin"
                   data-toggle="tooltip"
                   data-placement="bottom"
@@ -68,7 +64,7 @@ export default function Hero() {
                   title="Instagram"
                   href="https://instagram.com/vndreigeorgescu"
                 >
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </a>
               </div>
             </div>

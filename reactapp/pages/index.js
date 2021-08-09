@@ -24,9 +24,6 @@ export default function Home() {
           <title>Andrei Georgescu - Software Engineer</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <h1 className="title">
-          {/* Welcome to <a href="https://nextjs.org">Next.js!</a> */}
-        </h1>
         <Hero />
         <About />
     </Layout>
