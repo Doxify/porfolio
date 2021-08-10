@@ -4,13 +4,17 @@ export default function ProjectCard({ project }) {
       {/* <div className="card-header">{project.name}</div> */}
       <img class="card-img-top" src={project.image_link} alt="Card image cap" />
       <div className="card-body">
-        <h5 className="card-title">{project.name}</h5>
+        {/* <small className="card-text text-muted text-end">{project.start_date} - {project.end_date}</small> */}
+        {/* <p className="card-text">{project.start_date} -- {project.end_date}</p> */}
         <p className="card-text">
           {project.desc}
         </p>
+      
+        <small className="card-subtitle text-muted">Date:</small>
+        <p className="card-text small">{project.start_date} - {project.end_date}</p>
+
+        <small className="card-subtitle text-muted">Built with:</small>
         <p className="card-text text-muted small">
-          Built with...
-          <br />
           {
             project.technologies.map((t) => (
               <small className="technology-item text-dark">{t}</small>

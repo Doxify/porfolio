@@ -16,7 +16,10 @@ export default function Projects({ allProjectsData }) {
   return (
     <Layout>
       {allProjectsData.map(project => (
-        <ProjectCard key={project.name} project={project} />
+        <div>
+          <h5 className="card-title text-center">{project.name}</h5>
+          <ProjectCard key={project.name} project={project} />
+        </div>
       ))}
     </Layout>
   )
