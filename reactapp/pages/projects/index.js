@@ -1,11 +1,10 @@
-import Head from 'next/head'
-import Hero from '../../components/hero'
 import Layout from '../../components/layout'
+import ProjectCard from '../../components/projectCard'
 
-import { getSortedProjectsData } from '../../lib/projects';
+import { getProjectsData } from '../../lib/projects';
 
 export async function getStaticProps() {
-  const allProjectsData = await getSortedProjectsData();
+  const allProjectsData = await getProjectsData();
   return {
     props: {
       allProjectsData,
@@ -13,29 +12,12 @@ export async function getStaticProps() {
   }
 }
 
-
 export default function Projects({ allProjectsData }) {
-  console.log(allProjectsData)
   return (
     <Layout>
-        <Head>
-          <title>Andrei Georgescu - Software Engineer</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Hero />
-        <div className="hero">
-          <div className="container">
-            {/* {
-              allProjectsData ? allProjectsData.map(project => (
-                <div key={project.id} className="project">
-                  <h2>{project.name}</h2>
-                  <p>{project.description}</p>
-                </div>
-              ))
-              : null
-            } */}
-          </div>
-        </div>
+      {allProjectsData.map(project => (
+        <ProjectCard key={project.name} project={project} />
+      ))}
     </Layout>
   )
 }
