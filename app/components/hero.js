@@ -12,10 +12,11 @@ export default function Hero() {
               className="avatar shadow rounded-circle z-depth-2"
               height="175"
               width="175"
+              alt="picture of Andrei Georgescu on a hike"
             />
             <div id="name">
               <small className="text-muted">
-                👋 Hello, I'm
+                👋 Hello, I&apos;m
                 <h6 className="name display-6 text-dark">
                   Andrei Georgescu
                 </h6>

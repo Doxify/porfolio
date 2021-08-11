@@ -36,6 +36,7 @@ export default function Social() {
           data-toggle="tooltip"
           data-placement="bottom"
           target="_blank"
+          rel="noreferrer"
           title={site.name}
           href={site.link}
         >

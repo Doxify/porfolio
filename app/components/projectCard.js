@@ -1,11 +1,18 @@
+import Image from 'next/image';
+
 export default function ProjectCard({ project }) {
   return (
     <div className="card bg-light shadow mb-4">
       {/* <div className="card-header">{project.name}</div> */}
-      <img class="card-img-top" src={project.image_link} alt="Card image cap" />
+      <Image
+        className="card-img-top"
+        src={project.image_link} 
+        alt="Card image cap"
+        quality="100"
+        height={300}
+        width={500}
+      />
       <div className="card-body">
-        {/* <small className="card-text text-muted text-end">{project.start_date} - {project.end_date}</small> */}
-        {/* <p className="card-text">{project.start_date} -- {project.end_date}</p> */}
         <p className="card-text">
           {project.desc}
         </p>
@@ -16,8 +23,8 @@ export default function ProjectCard({ project }) {
         <small className="card-subtitle text-muted">Built with:</small>
         <p className="card-text text-muted small">
           {
-            project.technologies.map((t) => (
-              <small className="technology-item text-dark">{t}</small>
+            project.technologies.map((t, i) => (
+              <small key={i} className="technology-item text-dark">{t}</small>
             ))
           }
         </p>
@@ -30,6 +37,7 @@ export default function ProjectCard({ project }) {
               data-toggle="tooltip"
               data-placement="bottom"
               target="_blank"
+              rel="noreferrer"
               title="View source code on GitHub"
               href={project.github_link}
 
@@ -46,6 +54,7 @@ export default function ProjectCard({ project }) {
               data-toggle="tooltip"
               data-placement="bottom"
               target="_blank"
+              rel="noreferrer"
               title="View documentation on Google Docs"
               href={project.documentation_link}
 
@@ -62,6 +71,7 @@ export default function ProjectCard({ project }) {
               data-toggle="tooltip"
               data-placement="bottom"
               target="_blank"
+              rel="noreferrer"
               title="View Application"
               href={project.demo_link}
 

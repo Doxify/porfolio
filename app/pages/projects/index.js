@@ -15,10 +15,10 @@ export async function getStaticProps() {
 export default function Projects({ allProjectsData }) {
   return (
     <Layout>
-      {allProjectsData.map(project => (
-        <div>
+      {allProjectsData.map((project, i) => (
+        <div key={i}>
           <h5 className="card-title text-center">{project.name}</h5>
-          <ProjectCard key={project.name} project={project} />
+          <ProjectCard project={project} />
         </div>
       ))}
     </Layout>
