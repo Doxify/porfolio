@@ -1,5 +1,4 @@
 import styles from './layout.module.css'
-import Head from 'next/head'
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 
@@ -19,9 +18,6 @@ export default function Layout({ children }) {
 
   return (
     <div>
-      <Head>
-        <title>Andrei Georgescu - Software Engineer</title>
-      </Head>
       <Navigation />
       <div
         onTransitionEnd={() => {
