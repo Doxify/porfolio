@@ -16,9 +16,8 @@ export default class MyDocument extends Document {
 
   render() {
     const { isProduction } = this.props
-
     return (
-      <Html>
+      <Html charSet={"utf-8"} lang={"en"}>
         <Head>
           <link rel="icon" href={FavIcon} />
           <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />

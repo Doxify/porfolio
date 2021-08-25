@@ -1,10 +1,10 @@
 import Layout from '../../components/layout'
 import ProjectCard from '../../components/projectCard'
-
 import { getProjectsData } from '../../lib/projects';
+import Head from "next/head";
 
 export async function getStaticProps() {
-  const allProjectsData = await getProjectsData();
+  const allProjectsData = getProjectsData();
   return {
     props: {
       allProjectsData,
@@ -15,6 +15,9 @@ export async function getStaticProps() {
 export default function Projects({ allProjectsData }) {
   return (
     <Layout>
+      <Head>
+        <title>Andrei Georgescu - Projects</title>
+      </Head>
       {allProjectsData.map((project, i) => (
         <div key={i}>
           <h5 className="card-title text-center">{project.name}</h5>

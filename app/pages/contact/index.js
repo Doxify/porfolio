@@ -1,8 +1,12 @@
 import Layout from '../../components/layout'
+import Head from "next/head";
 
 export default function Contact() {
   return (
     <Layout>
+      <Head>
+        <title>Andrei Georgescu - Contact</title>
+      </Head>
       <div className="card">
         <div className="card-header">Contact Me</div>
         <div className="card-body text-center">
