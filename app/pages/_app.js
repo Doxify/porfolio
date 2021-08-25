@@ -1,10 +1,18 @@
-// add bootstrap css 
+import React from 'react'
+import Router from 'next/router'
+
+import * as gtag from '../lib/gtag'
+
 import 'bootstrap/dist/css/bootstrap.css'
-// own css files here
 import '../styles/global.css'
+
+// Track pageviews on route change
+Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Component {...pageProps} />
+    <>
+      <Component {...pageProps} />
+    </>
   )
 }
