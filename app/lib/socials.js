@@ -1,12 +1,11 @@
-export default function Social() {
-
-  const sites = [
+export const getSocialMediaData = () => {
+  return [
     {
       id: 0,
       name: 'GitHub',
       link: 'https://github.com/doxify',
       icon: 'fab fa-github'
-    }, 
+    },
     {
       id: 1,
       name: 'LinkedIn',
@@ -24,25 +23,12 @@ export default function Social() {
       name: 'Instagram',
       link: 'https://instagram.com/vndreigeorgescu',
       icon: 'fab fa-instagram'
+    },
+    {
+      id: 4,
+      name: 'Email',
+      link: 'mailto://ageorgescu98@gmail.com',
+      icon: 'fa fa-envelope'
     }
   ]
-
-  return (
-    <div id="profile-social-buttons">
-      {sites.map(site => (
-        <a
-          className="btn btn-outline-dark me-2"
-          key={site.id}
-          data-toggle="tooltip"
-          data-placement="bottom"
-          target="_blank"
-          rel="noreferrer"
-          title={site.name}
-          href={site.link}
-        >
-          <i className={site.icon}></i>
-        </a>
-      ))}
-    </div>
-  )
 }

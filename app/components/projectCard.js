@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="card bg-light shadow mb-4">
+    <div className="card bg-light mb-4">
       {/* <div className="card-header">{project.name}</div> */}
       <Image
         className="card-img-top"

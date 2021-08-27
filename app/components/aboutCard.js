@@ -1,8 +1,8 @@
-export default function About() {
+export default function AboutCard() {
   return (
     <div className="about">
       <div className="container">
-        <div className="card bg-light shadow">
+        <div className="card bg-light">
           <div className="card-header">About Me</div>
           <div className="card-body">
             <p className="card-text mb-4">

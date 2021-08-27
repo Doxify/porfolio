@@ -1,16 +1,16 @@
 import Layout from '../../components/layout'
 import ProjectCard from '../../components/projectCard'
-import { getProjectsData } from '../../lib/projects';
 import Head from "next/head";
-
-export async function getStaticProps() {
-  const allProjectsData = getProjectsData();
-  return {
-    props: {
-      allProjectsData,
-    }
-  }
-}
+// import { getProjectsData } from '../../lib/projects';
+//
+// export async function getStaticProps() {
+//   const allProjectsData = getProjectsData();
+//   return {
+//     props: {
+//       allProjectsData,
+//     }
+//   }
+// }
 
 export default function Projects({ allProjectsData }) {
   return (
@@ -18,12 +18,12 @@ export default function Projects({ allProjectsData }) {
       <Head>
         <title>Andrei Georgescu - Projects</title>
       </Head>
-      {allProjectsData.map((project, i) => (
-        <div key={i}>
-          <h5 className="card-title text-center">{project.name}</h5>
-          <ProjectCard project={project} />
-        </div>
-      ))}
+      {/*{allProjectsData.map((project, i) => (*/}
+      {/*  <div key={i}>*/}
+      {/*    <h5 className="card-title text-center">{project.name}</h5>*/}
+      {/*    <ProjectCard project={project} />*/}
+      {/*  </div>*/}
+      {/*))}*/}
     </Layout>
   )
 }

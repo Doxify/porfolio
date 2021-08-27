@@ -1,10 +1,4 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-
-const projectsDirectory = path.join(process.cwd(), 'projects');
-
-export function getProjectsData() {
+export const getProjectsData = () => {
   return [
     { 
       name: "DormMates", 
