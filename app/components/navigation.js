@@ -10,8 +10,8 @@ export default function Navigation() {
     },
     {
       id: 1,
-      path: '/projects',
-      name: 'Projects',
+      path: '/experience',
+      name: 'Experience',
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export default function Navigation() {
   ]
 
   return (
-    <ul className="nav justify-content-center mb-4">
+    <ul className="nav justify-content-center mt-4 mb-4">
       {routes.map(route => (
         <li 
           className="nav-item"

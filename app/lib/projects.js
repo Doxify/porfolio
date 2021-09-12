@@ -2,10 +2,15 @@ export const getProjectsData = () => {
   return [
     { 
       name: "DormMates", 
-      desc: "A platform that allows university students to find the right roommates and housing for them.",
+      desc: "A platform that allows university students to find roommates and housing",
       start_date: "June 2021",
       end_date: "August 2021",
       area_of_development: "Backend",
+      bullets: [
+        "Led the project from start to finish and won best milestone twice (out of 5)",
+        "Helped design the backend architecture using Express and Node",
+        "Deployed the application to AWS using the EC2 and RDS services"
+      ],
       technologies: ["Express", "Node.js", "Pug", "Passport", "MySQL"],
       github_link: null,
       documentation_link: "https://docs.google.com/document/d/1YablUdmfkEUNHqHKhN6Jouy4g_yD5uapiQL1PkwlUI4/edit?usp=sharing",
@@ -14,10 +19,13 @@ export const getProjectsData = () => {
     },
     { 
       name: "GoSupreme", 
-      desc: "A Go package that allows you to easily interface with the www.supremenewyork.com backend. Currently supports obtaining products in stock, products by keywords, and product styles.",
+      desc: "Unofficial API for www.supremenewyork.com written in Go",
       start_date: "June 2021",
       end_date: "Present",
       area_of_development: "Backend",
+      bullets: [
+        "Reverse engineered network requests to create a wrapper library",
+      ],
       technologies: ["Go"],
       github_link: "https://github.com/Doxify/gosupreme",
       demo_link: null,
@@ -35,9 +43,13 @@ export const getProjectsData = () => {
     // },
     { 
       name: "Uno", 
-      desc: "Four player, online multiplayer version of the card game, Uno. Also features global and in-game chat rooms.",
+      desc: "Four player, online multiplayer clone of the card game, Uno",
       start_date: "March 2021",
       end_date: "May 2021",
+      bullets: [
+        "Implemented state and chat with Web Sockets, Express, and Node",
+        "Dockerized the application and deployed it to Heroku"
+      ],
       technologies: ["Docker", "Express", "Node.js", "Pug", "Passport", "Postgres", "Pusher"],
       area_of_development: "Full Stack",
       documentation_link: "https://docs.google.com/document/d/1GbiVfvtMYpH_urf1B13Z-IrYvBr3aOJzF5xrXoYaWNY/edit?usp=sharing",
@@ -47,10 +59,12 @@ export const getProjectsData = () => {
     },
     { 
       name: "Web Server", 
-      //- desc: "A web server capable of the HTTP/1.1  protocol created with only standard libraries in Java.",
-      desc: "Backend web server written in Java using only standard libraries. It obeys the HTTP/1.1 protocol and can be used to distribute web pages, execute cgi scripts, or create REST APIs.",
+      desc: "HTTP/1.1 server created using only standard libraries in Java",
       start_date: "February 2021",
       end_date: "March 2021",
+      bullets: [
+        "Utilized the factory design pattern to handle incoming requests",
+      ],
       technologies: ["Java"],
       area_of_development: "Backend",
       github_link: "https://github.com/Doxify/web-server",
@@ -58,11 +72,15 @@ export const getProjectsData = () => {
       image_link: "/images/web-server-preview.png"
     },
     { 
-      name: "Photo Sharing App", 
-      desc: "Clone of the image sharing site, Imgur. It allows users to upload, search, comment on photos.",
+      name: "Imgur Clone", 
+      desc: "Fully functioning clone of Imgur including user profiles, comments, and likes",
       start_date: "May 2020",
       end_date: "June 2020",
       area_of_development: "Full Stack",
+      bullets: [
+        "Served the frontend (HTML/CSS/Bootstrap) with Express and Node",
+        "Created REST API that utilized a MySQL database for storage",
+      ],
       technologies: ["Express", "Node.js", "MySQL", "Bootstrap"],
       github_link: "https://github.com/Doxify/imgur-clone/",
       demo_link: null,
