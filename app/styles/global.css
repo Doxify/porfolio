@@ -61,6 +61,10 @@ img {
   margin-bottom: 5px;
 }
 
+.project-card {
+  border: 0 !important
+}
+
 /* .projects-container {
   overflow-x: scroll;
   overflow-y: hidden;

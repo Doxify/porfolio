@@ -7,21 +7,23 @@ export default function Hero({ socialData }) {
       <div className="container">
         <div className="row">
           <div className="col text-center" id="profile-description">
-            <Image
+            {/* <Image
               src="/images/profile.png"
               className="rounded-circle z-depth-2"
               height="175"
               width="175"
               alt="picture of Andrei Georgescu on a hike"
-            />
+            /> */}
             <div id="name">
               <small className="text-muted">
                 👋 Hello, I&apos;m
-                <h6 className="name display-6 text-dark">
+                <h6 className="name display-5 text-dark">
                   Andrei Georgescu
                 </h6>
+                Student, Software Engineer, Hiker, IPA Lover, F1 Enthusiast
               </small>
             </div>
+            <br />
             <div id={"profile-social-buttons"}>
               {socialData.map((social, i) => (
                 <SocialMediaButton key={i} name={social.name} link={social.link} icon={social.icon} />

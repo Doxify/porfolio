@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
 
   render() {
     const { isProduction } = this.props
-    console.log(isProduction);
 
     return (
       <Html charSet={"utf-8"} lang={"en"}>
