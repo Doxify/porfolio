@@ -28,7 +28,7 @@ export default function Experience({ allProjectsData, allEducationData, allWorkD
         <title>Andrei Georgescu - Experience</title>
       </Head>
       <div className="conatiner mb-3">
-        <h4 className=""><mark>🏫 Education</mark></h4>
+        <h4 className="title"><mark>🏫 Education</mark></h4>
         {allEducationData.map(education => (
           <EducationCard key={education.id} education={education} />
         ))}      
