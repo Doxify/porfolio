@@ -2,6 +2,13 @@ export const getWorkData = () => {
   return [
     {
       id: 0,
+      name: "HUGS",
+      title: "Software Development Intern",
+      date: "Sep. 2021 - Present",
+      bullets: []
+    },
+    {
+      id: 1,
       name: "CAHSI",
       title: "Undergraduate Researcher",
       date: "Jul. 2020 - Aug. 2020",
@@ -11,7 +18,7 @@ export const getWorkData = () => {
       ]
     },
     {
-      id: 1,
+      id: 2,
       name: "Great Pacific Tour Company",
       title: "Administrative Assistant",
       date: "Jun. 2017 - Mar. 2020",
@@ -22,7 +29,7 @@ export const getWorkData = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       name: "Hydra Networks, LLC",
       title: "Founder",
       date: "Jun. 2013 - Dec. 2016",
