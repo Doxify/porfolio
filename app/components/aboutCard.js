@@ -5,12 +5,12 @@ export default function AboutCard() {
       <div className="card-body">
         <p className="card-text">
           My name is Andrei and I am an undergraduate student at San Francisco State University. 
-          I will be graudating with my Bachelor of Computer Science this fall!
+          I will be graduating with my Bachelor of Computer Science this fall!
         </p>
         <p className="card-text">
           I&apos;m most passionate about building back-end services but I have full-stack experience. 
           I am currently looking for opportunities where I can use my software engineering skills to 
-          add value and grow an engineer.
+          add value and grow as an engineer.
         </p>
       </div>
     </div>
