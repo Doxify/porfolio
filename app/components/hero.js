@@ -35,7 +35,7 @@ export default function Hero({ socialData }) {
             </div>
             <br />
             <div id={"profile-social-buttons"}>
-              {socialData.map((social, i) => (
+              {socialData && socialData.map((social, i) => (
                 <SocialMediaButton key={i} name={social.name} link={social.link} icon={social.icon} />
               ))}
             </div>

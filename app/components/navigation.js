@@ -17,12 +17,7 @@ export default function Navigation() {
       id: 2,
       path: 'https://drive.google.com/file/d/1XGAZAIHs8jFXZKm8smFylcONU8R6aYNF/view?usp=sharing',
       name: 'Resume',
-    },
-    // {
-    //   id: 3,
-    //   path: '/contact',
-    //   name: 'Contact',
-    // },
+    }
   ]
 
   return (

@@ -1,12 +1,12 @@
 export const getWorkData = () => {
   return [
-    {
-      id: 0,
-      name: "HUGS",
-      title: "Software Development Intern",
-      date: "Sep. 2021 - Present",
-      bullets: []
-    },
+    // {
+    //   id: 0,
+    //   name: "HUGS",
+    //   title: "Software Development Intern",
+    //   date: "Sep. 2021 - Present",
+    //   bullets: []
+    // },
     {
       id: 1,
       name: "CAHSI",
