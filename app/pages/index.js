@@ -5,8 +5,8 @@ import gql from "graphql-tag"
 
 import Layout from '../components/partials/Layout'
 import Hero from '../components/Hero'
-import AboutCard from '../components/aboutCard'
-import Loading from '../components/loading'
+import AboutCard from '../components/AboutCard'
+import Loading from '../components/partials/Loading'
 
 export default function Home() {
   const { data, loading, error } = useQuery(gql`

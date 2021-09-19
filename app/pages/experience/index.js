@@ -3,11 +3,11 @@ import Head from "next/head";
 import { useQuery } from "@apollo/client"
 import gql from "graphql-tag"
 
-import Loading from '../../components/loading';
+import Loading from '../../components/partials/Loading';
 import Layout from '../../components/partials/Layout';
-import ProjectCard from '../../components/projectCard';
+import ProjectCard from '../../components/ProjectCard';
 import EducationCard from '../../components/EducationCard';
-import WorkCard from '../../components/workCard';
+import WorkCard from '../../components/WorkCard';
 
 
 export default function Experience() {
