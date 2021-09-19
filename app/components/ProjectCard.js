@@ -1,4 +1,8 @@
 export default function ProjectCard({ project }) {
+  if(!project.active) {
+    return ""
+  }
+
   return (
     <div className="card project-card">
       <div className="card-body">

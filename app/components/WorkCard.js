@@ -1,4 +1,8 @@
 export default function WorkCard({ work }) {
+  if(!work.active) {
+    return ""
+  }
+
   return (
     <div className="card project-card">
       <div className="card-body">
