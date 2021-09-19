@@ -27,6 +27,11 @@ img {
   display: block;
 }
 
+mark {
+  background-color: rgba(0, 0, 0, 0.9);  /* 50% transparent */
+  color: white;
+}
+
 .nav-link {
   /* background-color: #212529 !important; */
   color: #212529 !important;

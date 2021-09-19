@@ -4,7 +4,7 @@ export default function EducationCard({ education }) {
       <div className="card-body">
         <div className="d-flex justify-content-between">
           <span className="h5 card-title">{education.name}</span>
-          <span className="h6 card-title">{education.date}</span>
+          <span className="h6 card-title">{education.start} - {education.end}</span>
         </div>
         <div className="d-flex justify-content-between">
           <span className="card-subtitle">{education.degree}</span>

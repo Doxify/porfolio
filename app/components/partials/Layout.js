@@ -1,6 +1,6 @@
 import styles from './layout.module.css'
-import Navigation from '../components/navigation'
-import Footer from '../components/footer'
+import Navigation from './Navigation'
+import Footer from './Footer'
 
 import { useState, useEffect } from "react";
 
