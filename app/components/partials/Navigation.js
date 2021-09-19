@@ -17,7 +17,11 @@ export default function Navigation() {
       id: 2,
       path: 'https://drive.google.com/file/d/1XGAZAIHs8jFXZKm8smFylcONU8R6aYNF/view?usp=sharing',
       name: 'Resume',
+<<<<<<< HEAD:app/components/partials/Navigation.js
     },
+=======
+    }
+>>>>>>> e4ef943e60b5865f445bcd73c406b65b95df09cc:app/components/navigation.js
   ]
 
   return (
