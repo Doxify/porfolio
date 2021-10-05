@@ -7,6 +7,6 @@
     <img src="https://vercelbadge.vercel.app/api/doxify/portfolio"></img>
   </p>
   <p align="center"> 
-    <img heigh="500px" width="700px" src="https://user-images.githubusercontent.com/9636316/133942685-fdfdc55c-982f-4204-8ec5-508b504b2ea2.gif"></img>
+    <img heigh="501px" width="700px" src="https://user-images.githubusercontent.com/9636316/133942685-fdfdc55c-982f-4204-8ec5-508b504b2ea2.gif"></img>
   </p>
 </p>
