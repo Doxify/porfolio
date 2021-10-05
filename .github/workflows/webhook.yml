@@ -6,5 +6,4 @@ jobs:
     steps:
       - uses: Sniddl/discord-commits@v1.3
         with:
-            webhook: https://discord.com/api/webhooks/${{ secrets.DISCORD_WEBHOOK_ID }}/${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-        
+            webhook: https://discord.com/api/webhooks/894867511470882826/oYq5vzda8aYW--rCiplr2oLf6coFliS-FwxTsNKLEZ0n_8EPIdVwppQwY7Bkw0LXTqNi
