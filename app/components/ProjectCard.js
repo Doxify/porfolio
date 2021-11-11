@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
         <div className="d-flex justify-content-between">
           <span className="h5 card-title">{project.name}</span>
           {// Show a demo link if available or github source if not
-            project.demo_link 
+            project.demo_link === "undefined" 
             ? <a 
                 className="h6"
                 data-toggle="tooltip"
