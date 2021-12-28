@@ -7,8 +7,9 @@ import '../styles/global.css'
 import client from '../lib/apollo-client';
 import { ApolloProvider } from "@apollo/client";
 
-// Track pageviews on route change
-Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
+Router.events.on('routeChangeComplete', (url) => {
+  gtag.pageview(url);  // Track pageviews on route change
+})
 
 export default function MyApp({ Component, pageProps }) {
   return (

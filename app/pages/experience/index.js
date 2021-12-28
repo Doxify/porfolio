@@ -35,6 +35,7 @@ export default function Experience() {
         gpa
         name
         start
+        logo
       }
       works {
         _id
@@ -56,7 +57,9 @@ export default function Experience() {
 
   if (error) {
     return (
-      <Loading /> // TODO: Handle this
+      <div className="text-center p-5 mt-5">
+        <p>Internal server error. Please try again later.</p>
+      </div>
     )
   }
 
@@ -67,21 +70,21 @@ export default function Experience() {
         <title>Andrei Georgescu - Experience</title>
       </Head>
       <div className="conatiner mb-3">
-        <h3 className="title"><mark>🏫 Education</mark></h3>
+        <h4 className="title"><mark>🏫 Education</mark></h4>
         {data.educations.map(education => (
           <EducationCard key={education._id} education={education} />
         ))}      
       </div>
 
       <div className="conatiner mb-3">
-        <h3 className="title"><mark>📁 Work Experience</mark></h3>
+        <h4 className="title"><mark>📁 Work Experience</mark></h4>
         {data.works.map(work => (
           <WorkCard key={work._id} work={work} />
         ))} 
       </div>
 
       <div className="conatiner mb-3">
-        <h3 className="title"><mark>👨🏻‍💻 Notable Projects</mark></h3>
+        <h4 className="title"><mark>👨🏻‍💻 Notable Projects</mark></h4>
         {data.projects.map(project => (
           <ProjectCard key={project._id} project={project} />
         ))}

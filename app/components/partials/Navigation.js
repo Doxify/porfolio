@@ -21,7 +21,7 @@ export default function Navigation() {
   ]
 
   return (
-    <ul className="nav justify-content-center mt-4 mb-4">
+    <ul className="nav justify-content-center p-3 bg-gray">
       {routes.map(route => (
         <li 
           className="nav-item"

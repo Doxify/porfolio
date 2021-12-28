@@ -7,6 +7,7 @@ import Layout from '../components/partials/Layout'
 import Hero from '../components/Hero'
 import AboutCard from '../components/AboutCard'
 import Loading from '../components/partials/Loading'
+import TypeWriter from '../components/TypeWriter'
 
 export default function Home() {
   const { data, loading, error } = useQuery(gql`
@@ -21,6 +22,8 @@ export default function Home() {
         name
         bio_intro
         bio_general
+        personality_types
+        working_on
       }
     }
   `);
@@ -37,12 +40,15 @@ export default function Home() {
     )
   }
 
+  console.log(data);
+
   return (
       <Layout>
         <Head>
           <title>Andrei Georgescu - Software Engineer</title>
         </Head>
         <Hero socials={data.socials} />
+        <TypeWriter items={data.about.personality_types} />
         <AboutCard about={data.about} />
       </Layout>
   )
