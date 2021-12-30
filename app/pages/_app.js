@@ -14,14 +14,6 @@ Router.events.on('routeChangeComplete', (url) => {
 
 export default function MyApp({ Component, pageProps }) {
   const [progress, setProgress] = useState(100);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setProgress(100);
-      setLoading(false);
-    }, 1500)
-  }, [pageProps]);
 
   return (
     <ApolloProvider client={client}>
@@ -29,10 +21,9 @@ export default function MyApp({ Component, pageProps }) {
         progress={progress}
         height={3}
         color='#0b5ed7'
+        waitingTime={700}
       />
-      <div display={!loading ? 'block' : ''}>
-        <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
     </ApolloProvider>
   )
 }

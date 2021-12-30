@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useState } from "react";
 
 import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
@@ -7,11 +6,8 @@ import gql from "graphql-tag";
 import Layout from "../components/partials/Layout";
 import Hero from "../components/Hero";
 import AboutCard from "../components/AboutCard";
-import Loading from "../components/partials/Loading";
-import TypeWriter from "../components/TypeWriter";
 import Experience from "../components/Experience";
 import ResumeButton from "../components/ResumeButton";
-
 import LoadingBar from "react-top-loading-bar";
 
 export default function Home() {
@@ -29,6 +25,7 @@ export default function Home() {
         bio_general
         personality_types
         working_on
+        resume_views
       }
       projects {
         _id
@@ -73,19 +70,17 @@ export default function Home() {
       <Head>
         <title>Andrei Georgescu - Software Engineer</title>
       </Head>
-        <>
-          <Hero
-            socials={data.socials}
-            personalities={data.about.personality_types}
-          />
-          <ResumeButton />
-          <AboutCard about={data.about} />
-          <Experience
-            works={data.works}
-            educations={data.educations}
-            projects={data.projects}
-          />
-        </>
+      <Hero
+        socials={data.socials}
+        personalities={data.about.personality_types}
+      />
+      <ResumeButton views={data.about.resume_views} />
+      <AboutCard about={data.about} />
+      <Experience
+        works={data.works}
+        educations={data.educations}
+        projects={data.projects}
+      />
     </Layout>
   );
 }
