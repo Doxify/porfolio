@@ -1,9 +1,0 @@
-name: Discord Commits
-on: [push]
-jobs:
-  report:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Sniddl/discord-commits@v1.3
-        with:
-            webhook: https://discord.com/api/webhooks/${{ secrets.DISCORD_WEBHOOK_ID }}/${{  secrets.DISCORD_WEBHOOK_TOKEN }}
