@@ -5,7 +5,7 @@ export default function TypeWriter({ items }) {
 
   return (
     <div className="container text-center text-muted">
-      <span>and I'm </span>
+      <span>and I&apos;m </span>
       <Typewriter
         loop
         cursor
