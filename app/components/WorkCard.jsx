@@ -11,11 +11,11 @@ export default function WorkCard({ work }) {
           <span className="h6 card-subtitle">{work.start} - {work.end}</span>
         </div>
         <p className="card-subtitle text-muted">{work.name}</p>
-        <ul>
+        {/* <ul>
           {
             work.bullets.map((bullet) => <li className="card-text" key={bullet}>{bullet}</li>)
           }
-        </ul>
+        </ul> */}
       </div>
     </div>
   )

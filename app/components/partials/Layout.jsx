@@ -18,7 +18,7 @@ export default function Layout({ children }) {
 
   return (
     <div>
-      <Navigation />
+      {/* <Navigation /> */}
       <div
         onTransitionEnd={() => {
           if (transitionStage === "fadeOut") {

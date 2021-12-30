@@ -35,11 +35,11 @@ export default function ProjectCard({ project }) {
           }
         </div>
         <p className="card-subtitle text-muted">{project.desc}</p>
-        <ul>
+        {/* <ul>
           {
             project.bullets.map((bullet) => <li className="card-text" key={bullet}>{bullet}</li>)
           }
-        </ul>
+        </ul> */}
       </div>
     </div>
   )
