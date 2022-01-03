@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">porfolio</h2>
+  <h2 align="center">portfolio</h2>
   <p align="center"> 
     This is my personal portfolio site, it was built with Next.js and GraphQL.
   </p>
