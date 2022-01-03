@@ -3,7 +3,7 @@ import TypeWriter from "./TypeWriter";
 
 export default function Hero({ socials, personalities }) {
   return (
-    <div className="hero container mt-5 mb-4">
+    <div className="hero container mb-4">
       <div className="row">
         <div className="col text-center" id="profile-description">
           <section id={"name"}>

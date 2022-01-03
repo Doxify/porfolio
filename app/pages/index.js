@@ -76,11 +76,11 @@ export default function Home() {
       />
       <ResumeButton views={data.about.resume_views} />
       <AboutCard about={data.about} />
-      <Experience
+      {/* <Experience
         works={data.works}
         educations={data.educations}
         projects={data.projects}
-      />
+      /> */}
     </Layout>
   );
 }

@@ -27,8 +27,8 @@ export default function ResumeButton({ views }) {
         </a>
       </Link>
       <br />
-      {loading && <small className="text-muted">fetching resume...</small>}
-      {!loading && <small className="text-muted">{data ? data.updateOneAbout.resume_views : views} views</small>}
+      {/* {loading && <small className="text-muted">fetching resume...</small>}
+      {!loading && <small className="text-muted">{data ? data.updateOneAbout.resume_views : views} views</small>} */}
     </div>
   );
 }
