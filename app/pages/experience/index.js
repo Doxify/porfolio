@@ -8,6 +8,7 @@ import Layout from '../../components/partials/Layout';
 import ProjectCard from '../../components/ProjectCard';
 import EducationCard from '../../components/EducationCard';
 import WorkCard from '../../components/WorkCard';
+import DetailedProjectCard from '../../components/DetailedProjectCard';
 
 
 export default function Experience() {
@@ -21,11 +22,13 @@ export default function Experience() {
         bullets
         demo_link
         github_link
+        image_link
         desc
         documentation_link
         end_date
         start_date
-        technologies       
+        technologies
+        featured       
       }
       educations {
         _id
@@ -54,6 +57,9 @@ export default function Experience() {
       <Loading />
     )
   }
+
+  const featuredProjects = data.projects.filter(project => project.featured);
+  const regularProjects = data.projects.filter(project => !project.featured);
 
   if (error) {
     return (
@@ -84,10 +90,22 @@ export default function Experience() {
       </div>
 
       <div className="conatiner mb-3">
-        <h4 className="title"><mark>👨🏻‍💻 Notable Projects</mark></h4>
-        {data.projects.map(project => (
-          <ProjectCard key={project._id} project={project} />
-        ))}
+        <h4 className="title"><mark>🥳 Notable Projects</mark></h4>
+        
+        <div className="row mt-3">
+          {featuredProjects.map(project => project.active ? (
+            <div className="col-sm-12 col-md-6">
+              <DetailedProjectCard key={project._id} project={project} />
+            </div>
+          ) : null )}
+        </div>
+
+        <div className="row mt-3">
+          {regularProjects.map(project => (
+            project.featured ? <DetailedProjectCard key={project._id} project={project} />
+            : <ProjectCard key={project._id} project={project} />
+          ))}
+        </div>
       </div>
     </Layout>
   )

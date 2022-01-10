@@ -67,7 +67,22 @@ mark {
 }
 
 .project-card {
-  border: 0 !important
+  border: 0 !important;
+}
+
+@media only screen and (min-width: 800px) {
+  .detailed-project-card {
+    min-height: 320px;
+    max-height: 320px;
+  }
+}
+
+.detailed-project-card {
+  margin-bottom: 10px;
+}
+
+.detailed-project-card .h5 {
+  color: #f40000;
 }
 
 /* .projects-container {
