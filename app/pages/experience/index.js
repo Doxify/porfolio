@@ -1,22 +1,21 @@
 import Head from "next/head";
 
-import { useQuery } from "@apollo/client"
-import gql from "graphql-tag"
+import { useQuery } from "@apollo/client";
+import gql from "graphql-tag";
 
-import Loading from '../../components/partials/Loading';
-import Layout from '../../components/partials/Layout';
-import ProjectCard from '../../components/ProjectCard';
-import EducationCard from '../../components/EducationCard';
-import WorkCard from '../../components/WorkCard';
-import DetailedProjectCard from '../../components/DetailedProjectCard';
-
+import Loading from "../../components/partials/Loading";
+import Layout from "../../components/partials/Layout";
+import ProjectCard from "../../components/ProjectCard";
+import EducationCard from "../../components/EducationCard";
+import WorkCard from "../../components/WorkCard";
+import DetailedProjectCard from "../../components/DetailedProjectCard";
 
 export default function Experience() {
   const { data, loading, error } = useQuery(gql`
     query {
-      projects {
+      projects(query: { active: true }) {
         _id
-        name 
+        name
         active
         area_of_development
         bullets
@@ -28,7 +27,7 @@ export default function Experience() {
         end_date
         start_date
         technologies
-        featured       
+        featured
       }
       educations {
         _id
@@ -40,7 +39,7 @@ export default function Experience() {
         start
         logo
       }
-      works {
+      works(sortBy: START_DESC, query: { active: true }) {
         _id
         active
         bullets
@@ -53,22 +52,16 @@ export default function Experience() {
   `);
 
   if (loading) {
-    return (
-      <Loading />
-    )
+    return <Loading />;
   }
-
-  const featuredProjects = data.projects.filter(project => project.featured);
-  const regularProjects = data.projects.filter(project => !project.featured);
 
   if (error) {
     return (
       <div className="text-center p-5 mt-5">
         <p>Internal server error. Please try again later.</p>
       </div>
-    )
+    );
   }
-
 
   return (
     <Layout>
@@ -76,37 +69,46 @@ export default function Experience() {
         <title>Andrei Georgescu - Experience</title>
       </Head>
       <div className="conatiner mb-3">
-        <h4 className="title"><mark>🏫 Education</mark></h4>
-        {data.educations.map(education => (
+        <h4 className="title">
+          <mark>🏫 Education</mark>
+        </h4>
+        {data.educations.map((education) => (
           <EducationCard key={education._id} education={education} />
-        ))}      
+        ))}
       </div>
 
       <div className="conatiner mb-3">
-        <h4 className="title"><mark>📁 Work Experience</mark></h4>
-        {data.works.map(work => (
+        <h4 className="title">
+          <mark>📁 Work Experience</mark>
+        </h4>
+        {data.works.map((work) => (
           <WorkCard key={work._id} work={work} />
-        ))} 
+        ))}
       </div>
 
       <div className="conatiner mb-3">
-        <h4 className="title"><mark>🥳 Notable Projects</mark></h4>
-        
+        <h4 className="title">
+          <mark>🥳 Notable Projects</mark>
+        </h4>
+
         <div className="row mt-3">
-          {featuredProjects.map(project => project.active ? (
-            <div className="col-sm-12 col-md-6">
-              <DetailedProjectCard key={project._id} project={project} />
-            </div>
-          ) : null )}
+          {data.projects
+            .filter((project) => project.featured)
+            .map((project) => (
+              <div className="col-sm-12 col-md-6" key={project._id}>
+                <DetailedProjectCard key={project._id} project={project} />
+              </div>
+            ))}
         </div>
 
         <div className="row mt-3">
-          {regularProjects.map(project => (
-            project.featured ? <DetailedProjectCard key={project._id} project={project} />
-            : <ProjectCard key={project._id} project={project} />
-          ))}
+          {data.projects
+            .filter((project) => !project.featured)
+            .map((project) => (
+              <ProjectCard key={project._id} project={project} />
+            ))}
         </div>
       </div>
     </Layout>
-  )
+  );
 }
