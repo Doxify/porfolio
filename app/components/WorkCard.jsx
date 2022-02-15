@@ -1,6 +1,8 @@
+import { formatDateString } from "../lib/date";
+
 export default function WorkCard({ work }) {
-  if(!work.active) {
-    return ""
+  if (!work.active) {
+    return "";
   }
 
   return (
@@ -8,7 +10,10 @@ export default function WorkCard({ work }) {
       <div className="card-body">
         <div className="d-flex justify-content-between">
           <span className="h5 card-title">{work.title}</span>
-          <span className="h6 card-subtitle">{work.start} - {work.end}</span>
+          <span className="h6 card-subtitle">
+            {formatDateString(work.start)} -{" "}
+            {work.end ? formatDateString(work.end) : "Present"}
+          </span>
         </div>
         <p className="card-subtitle text-muted">{work.name}</p>
         {/* <ul>
@@ -18,5 +23,5 @@ export default function WorkCard({ work }) {
         </ul> */}
       </div>
     </div>
-  )
+  );
 }
