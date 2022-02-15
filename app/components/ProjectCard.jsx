@@ -1,16 +1,13 @@
 export default function ProjectCard({ project }) {
-  if(!project.active) {
-    return ""
-  }
-
   return (
     <div className="card project-card">
       <div className="card-body">
         <div className="d-flex justify-content-between">
           <span className="h5 card-title">{project.name}</span>
-          {// Show a demo link if available or github source if not
-            project.demo_link !== "undefined" 
-            ? <a 
+          {
+            // Show a demo link if available or github source if not
+            project.demo_link !== "undefined" ? (
+              <a
                 className="h6"
                 data-toggle="tooltip"
                 data-placement="bottom"
@@ -21,7 +18,8 @@ export default function ProjectCard({ project }) {
               >
                 Try Now
               </a>
-            : <a 
+            ) : (
+              <a
                 className="h6"
                 data-toggle="tooltip"
                 data-placement="bottom"
@@ -32,6 +30,7 @@ export default function ProjectCard({ project }) {
               >
                 Learn more
               </a>
+            )
           }
         </div>
         <p className="card-subtitle text-muted">{project.desc}</p>
@@ -42,5 +41,5 @@ export default function ProjectCard({ project }) {
         </ul> */}
       </div>
     </div>
-  )
+  );
 }

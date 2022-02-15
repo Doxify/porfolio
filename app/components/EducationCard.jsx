@@ -1,8 +1,4 @@
 export default function EducationCard({ education }) {
-  if (!education.active) {
-    return "";
-  }
-
   return (
     <div className="card flex-row flex-wrap project-card">
       <div className="card-body">
@@ -14,7 +10,9 @@ export default function EducationCard({ education }) {
         </div>
         <div className="d-flex justify-content-between">
           <span className="card-subtitle text-start">{education.degree}</span>
-          <span className="card-subtitle text-end d-none d-md-block">GPA: {education.gpa}</span>
+          <span className="card-subtitle text-end d-none d-md-block">
+            GPA: {education.gpa}
+          </span>
         </div>
       </div>
     </div>
